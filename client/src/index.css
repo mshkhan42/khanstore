@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root styles */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent horizontal scroll */
+html, body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden; /* lock horizontal scroll */
+  touch-action: pan-y; /* vertical scroll only */
+  overscroll-behavior-x: none;
+  background: none;
+}
+
+/* Links */
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+a:hover {
+  color: #535bf2;
+}
+
+/* Headings */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* Buttons */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Light mode */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* 3D title */
+.title-3d {
+  display: inline-block;
+  font-weight: 800;
+  background: linear-gradient(90deg, #f472b6 0%, #22d3ee 50%, #8b5cf6 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow:
+    1px 1px 0 rgba(0,0,0,0.36),
+    2px 2px 0 rgba(0,0,0,0.30),
+    3px 3px 0 rgba(0,0,0,0.22),
+    4px 4px 0 rgba(0,0,0,0.14);
+  animation: title-shimmer 6s linear infinite;
+  transition: transform 200ms ease, filter 200ms ease;
+  user-select: none;
+  pointer-events: none;
+}
+
+@keyframes title-shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.title-3d:hover {
+  transform: translateY(-3px) scale(1.02);
+  filter: drop-shadow(0 10px 30px rgba(34,211,238,0.08));
+}
+
+/* Product card background animation */
+.product-bg {
+  background: radial-gradient(ellipse at 10% 20%, rgba(34,211,238,0.12), transparent 12%),
+              radial-gradient(ellipse at 90% 80%, rgba(139,92,246,0.10), transparent 14%),
+              linear-gradient(135deg, rgba(75,85,99,0.06), rgba(2,6,23,0.06));
+  filter: blur(18px) saturate(120%);
+  transform: scale(1.03);
+  animation: product-bg-move 9s linear infinite;
+}
+
+@keyframes product-bg-move {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 50% 50%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* Product description clamp */
+.product-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 2 lines max */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.4rem; /* fixed line height */
+  min-height: 2.8rem; /* 2 lines */
+  max-height: 2.8rem;
+}
+
+/* Optional: hover effect for product description */
+.product-description:hover {
+  color: #22d3ee;
+  transition: color 0.2s ease;
+}
