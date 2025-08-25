@@ -1,14 +1,15 @@
 {
-  "name": "website",
+  "name": "khanstore-backend",
   "version": "1.0.0",
-  "description": "A premium, modern, and fully responsive e-commerce website for Pakistan, built with Node.js + Express backend and React frontend.",
-  "main": "index.js",
+  "description": "Premium Node.js + Express backend for KhanStore, a modern e-commerce platform tailored for Pakistan.",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["ecommerce", "express", "nodejs", "pakistan", "backend", "khanstore"],
+  "author": "Muhammed",
   "license": "ISC",
   "engines": {
     "node": ">=20.0.0"
