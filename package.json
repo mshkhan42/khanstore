@@ -1,14 +1,26 @@
 {
   "name": "khanstore-backend",
   "version": "1.0.0",
-  "description": "Premium Node.js + Express backend for KhanStore, a modern e-commerce platform tailored for Pakistan.",
+  "description": "Premium Node.js + Express backend for KhanStore — a modern e-commerce platform tailored for Pakistan.",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon --exec node src/index.js",
+    "lint": "eslint src --ext .js,.json",
+    "format": "prettier --write \"src/**/*.{js,json}\"",
+    "test": "echo \"No tests yet — coming soon!\" && exit 0"
   },
-  "keywords": ["ecommerce", "express", "nodejs", "pakistan", "backend", "khanstore"],
+  "keywords": [
+    "ecommerce",
+    "express",
+    "nodejs",
+    "pakistan",
+    "backend",
+    "khanstore",
+    "mongodb",
+    "jwt",
+    "vercel"
+  ],
   "author": "Muhammed",
   "license": "ISC",
   "engines": {
@@ -22,5 +34,10 @@
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.18.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.4"
   }
 }
