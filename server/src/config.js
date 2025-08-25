@@ -1,6 +1,13 @@
 import dotenv from 'dotenv';
-
 dotenv.config();
+
+const requiredEnv = ['MONGO_URI', 'JWT_SECRET'];
+
+requiredEnv.forEach((key) => {
+  if (!process.env[key]) {
+    console.warn(`⚠️ Warning: Missing environment variable "${key}".`);
+  }
+});
 
 const config = {
   // Server
@@ -13,7 +20,10 @@ const config = {
   jwtSecret: process.env.JWT_SECRET || 'defaultSecretKey',
 
   // Environment
-  nodeEnv: process.env.NODE_ENV || 'development'
+  nodeEnv: process.env.NODE_ENV || 'development',
+
+  // Debug Mode
+  isDev: process.env.NODE_ENV !== 'production'
 };
 
 export default config;

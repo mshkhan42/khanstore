@@ -1,7 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
-import config from './config.js'; // 🔥 central config import
+import config from './config.js';
 
 import userRoutes from './routes/userRoutes.js';
 import productRoutes from './routes/productRoutes.js';
@@ -18,13 +18,16 @@ app.use('/api/products', productRoutes);
 app.use('/api/cart', cartRoutes);
 app.use('/api/orders', orderRoutes);
 
-// Test Route
+// Health Check
 app.get('/', (req, res) => {
   res.send('✅ Khan Store API is running');
 });
 
 // MongoDB Connection + Server Start
-mongoose.connect(config.mongoURI)
+mongoose.connect(config.mongoURI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
   .then(() => {
     app.listen(config.port, '0.0.0.0', () => {
       console.log(`🚀 Server running on http://0.0.0.0:${config.port}`);
@@ -32,5 +35,5 @@ mongoose.connect(config.mongoURI)
   })
   .catch((err) => {
     console.error('❌ MongoDB connection error:', err.message);
-    process.exit(1); // Exit if DB not connected
+    process.exit(1);
   });
