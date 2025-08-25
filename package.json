@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Premium Node.js + Express backend for KhanStore — a modern e-commerce platform tailored for Pakistan.",
   "main": "src/index.js",
+  "type": "module",
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon --exec node src/index.js",
@@ -19,7 +20,8 @@
     "khanstore",
     "mongodb",
     "jwt",
-    "vercel"
+    "vercel",
+    "replit"
   ],
   "author": "Muhammed",
   "license": "ISC",
