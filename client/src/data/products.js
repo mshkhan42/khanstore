@@ -1,6 +1,6 @@
 // Products data for Khan Store
 export const products = [
-  { id: 1, name: 'Pakistani Kurta', description: 'Premium cotton kurta for men. Available in all sizes bbfiuufghskjhfjhkjs.', price: 2496, images: ['/products/kurta.jpg', '/products/kurta-2.jpg', '/products/kurta-3.jpg'] },
+  { id: 1, name: 'Pakistani Kurta', description: 'Premium cotton kurta for men. Available in all sizes bbfiuufghskjhfjhkjs.', price: 2496, images: ['/products/1-1.jpg', '/products/1-2.jpg', '/products/1-3.jpg'] },
   { id: 2, name: 'Ladies Handbag', description: 'Elegant leather handbag for women. Imported quality.', price: 3999, images: ['/products/handbag.jpg', '/products/handbag-2.jpg', '/products/handbag-3.jpg'] },
   { id: 3, name: 'Smart Watch', description: 'Feature-rich smart watch with health tracking.', price: 5999, images: ['/products/smartwatch.jpg', '/products/smartwatch-2.jpg', '/products/smartwatch-3.jpg'] },
   { id: 4, name: 'Sports Shoes', description: 'Comfortable and stylish sports shoes for all ages.', price: 3499, images: ['/products/shoes.jpg', '/products/shoes-2.jpg', '/products/shoes-3.jpg'] },
