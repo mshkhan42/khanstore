@@ -5,7 +5,7 @@ const faqs = [
   { question: "How do I order?", answer: "Browse products, add to cart, and checkout securely with your preferred payment method." },
   { question: "What are the payment options?", answer: "Easypaisa, JazzCash, and Cash on Delivery (COD) are available." },
   { question: "How much is shipping?", answer: "Flat shipping fee of 199 PKR per order anywhere in Pakistan." },
-  { question: "How do I contact support?", answer: "Email us at support@khanstore.pk or message on WhatsApp +92 300 1234567." },
+  { question: "How do I contact support?", answer: "Email us at mshkhanking@gmail.com or message on WhatsApp +92 3471173358." },
 ];
 
 export default function Help() {
@@ -47,7 +47,7 @@ export default function Help() {
       </div>
 
       <p className="text-center text-sm text-[#94a3b8] mt-10">
-        Still have questions? Contact us at <span className="text-[#22d3ee] font-semibold">support@khanstore.pk</span>
+        Still have questions? Contact us at <span className="text-[#22d3ee] font-semibold">mshkhanking@gmail.com</span>
       </p>
     </div>
   );
