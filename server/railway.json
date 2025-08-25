@@ -1,0 +1,13 @@
+{
+  "build": {
+    "command": "npm install"
+  },
+  "deploy": {
+    "command": "npm start",
+    "restartPolicy": "always"
+  },
+  "env": {
+    "PORT": "3000",
+    "NODE_ENV": "production"
+  }
+}
